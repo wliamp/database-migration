@@ -12,7 +12,7 @@ flyway {
     url = 'jdbc:postgresql://localhost:5432/common'
     user = 'postgres'
     password = '01235689'
-    schemas = ['auth', 'cmc', 'odr']
+    schemas = ['public', 'auth', 'cmc', 'odr']
     locations = ['filesystem:src/main/resources/db/migration']
     cleanDisabled = false
 }
