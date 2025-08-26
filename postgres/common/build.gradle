@@ -4,15 +4,16 @@ plugins {
     id 'org.flywaydb.flyway'
 }
 
+dependencies {
+    implementation 'org.postgresql:postgresql:42.7.3'
+}
+
 flyway {
     url = 'jdbc:postgresql://localhost:5432/common'
     user = 'postgres'
     password = '01235689'
-    schemas = ['auth', 'comm', 'order']
+    schemas = ['auth', 'cmc', 'odr']
     locations = ['filesystem:src/main/resources/db/migration']
-    cleanDisabled = true
+    cleanDisabled = false
 }
 
-dependencies {
-    implementation "org.postgresql:postgresql:42.7.3"
-}
