@@ -1,0 +1,12 @@
+subprojects {
+    flyway {
+        url = "jdbc:sqlserver://localhost:1433"
+        user = "sa"
+        password = "01235689"
+        locations = ["filesystem:src/main/resources/db/migration"]
+    }
+
+    dependencies {
+        implementation 'com.microsoft.sqlserver:mssql-jdbc:13.2.0.jre11'
+    }
+}

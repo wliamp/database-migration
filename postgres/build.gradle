@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+    id 'io.spring.dependency-management'
+    id 'org.flywaydb.flyway'
+}
+
+flyway {
+    url = 'jdbc:postgresql://localhost:5432/common'
+    user = 'postgres'
+    password = '01235689'
+    schemas = ['auth', 'comm', 'order']
+    locations = ['filesystem:src/main/resources/db/migration']
+    cleanDisabled = true
+}
+
+dependencies {
+    implementation "org.postgresql:postgresql:42.7.3"
+}

@@ -1,0 +1,12 @@
+subprojects {
+    flyway {
+        url = "jdbc:mysql://localhost:3306"
+        user = "root"
+        password = "01235689"
+        locations = ["filesystem:src/main/resources/db/migration"]
+    }
+
+    dependencies {
+        implementation 'com.mysql:mysql-connector-j:9.4.0'
+    }
+}

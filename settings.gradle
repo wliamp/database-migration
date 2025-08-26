@@ -1,0 +1,11 @@
+rootProject.name = 'dbm'
+
+include 'mssql',
+        'mssql:shop',
+
+        'postgres',
+        'postgres:common',
+
+        'mysql',
+        'mysql:shop'
+

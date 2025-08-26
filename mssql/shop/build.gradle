@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+    id 'io.spring.dependency-management'
+    id 'org.flywaydb.flyway'
+}
+
+flyway {
+    schemas = ['shop']
+}
+
+dependencies {
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:13.2.0.jre11'
+}
