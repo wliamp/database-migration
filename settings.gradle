@@ -1,11 +1,20 @@
 rootProject.name = 'dbm'
 
-include 'mssql',
-        'mssql:shop',
+include 'ms',
+    'ms:shop',
 
-        'postgres',
-        'postgres:common',
+    'my',
+    'my:shop',
 
-        'mysql',
-        'mysql:shop'
+    'pos',
+    'pos:comm'
+
+project(':ms').projectDir = file('mssql')
+project(':ms:shop').projectDir = file('mssql/shop')
+
+project(':my').projectDir = file('mysql')
+project(':my:shop').projectDir = file('mysql/shop')
+
+project(':pos').projectDir = file('postgres')
+project(':pos:comm').projectDir = file('postgres/common')
 
